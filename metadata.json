@@ -1,0 +1,6 @@
+{
+  "name": "RAW Skincare",
+  "description": "A bold, vibrant desktop homepage mockup for RAW skincare, featuring colour-blocked sections, big typography, and sculptural indie-beauty cosmetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

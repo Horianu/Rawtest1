@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,900&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Impact", "Arial Narrow", "Syne", ui-sans-serif, sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  
+  --color-toxic-lime: #DFFF00;
+  --color-electric-cyan: #00FFFF;
+  --color-hot-magenta: #FF00FF;
+  --color-deep-violet: #0000FF;
+  --color-neon-orange: #FF5A00;
+  --color-hot-coral: #FF6B6B;
+  --color-raw-charcoal: #1A1A1A;
+  --color-raw-neutral: #F9F9F7;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-raw-neutral);
+    color: var(--color-raw-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Animations and Custom Styles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: slow-spin 20s linear infinite;
+}
+
+/* Custom raw layout components */
+.raw-border-pixel {
+  box-shadow: 4px 4px 0px 0px #121212;
+}
+
+.raw-border-pixel-sm {
+  box-shadow: 2px 2px 0px 0px #121212;
+}
+
+.raw-border-pixel-lg {
+  box-shadow: 8px 8px 0px 0px #121212;
+}
+
