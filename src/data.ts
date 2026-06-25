@@ -97,11 +97,14 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const SINGLE_PRODUCTS = [
-  { id: "cleanse", name: "RAW Gel-to-Foam Cleanse", type: "Cleanse", price: 18, color: "#b6ff00", active: "Amino Acids + Glycerin" },
-  { id: "treat-barrier", name: "Barrier-Glue Serum", type: "Treat", price: 26, color: "#00f0ff", active: "3% Ceramides + B5" },
-  { id: "treat-glow", name: "Liquid Glaze Essence", type: "Treat", price: 28, color: "#ff007f", active: "10% Niacinamide" },
-  { id: "seal-cement", name: "Ceramide Cement Cream", type: "Seal", price: 24, color: "#ff5a00", active: "Lipid Complex" },
-  { id: "seal-moist", name: "Zero-Weight Gel Moisturizer", type: "Seal", price: 22, color: "#3D0c45", active: "Centella + Zinc" }
+  { id: "cleanse", name: "RAW Gel-to-Foam Cleanse", type: "Cleanse", price: 18, color: "#DFFF00", active: "Amino Acids + Glycerin" },
+  { id: "treat-barrier", name: "Barrier-Glue Serum", type: "Treat", price: 26, color: "#00FFFF", active: "3% Ceramides + B5" },
+  { id: "treat-glow", name: "Liquid Glaze Essence", type: "Treat", price: 28, color: "#FF00FF", active: "10% Niacinamide" },
+  { id: "seal-cement", name: "Ceramide Cement Cream", type: "Seal", price: 24, color: "#FF5A00", active: "Lipid Complex" },
+  { id: "seal-moist", name: "Zero-Weight Gel Moisturizer", type: "Seal", price: 22, color: "#0000FF", active: "Centella + Zinc" },
+  { id: "extra-oil", name: "Face Glue Oil", type: "Treat", price: 32, color: "#DFFF00", active: "Squalane + E" },
+  { id: "extra-mist", name: "Liquid Air Mist", type: "Treat", price: 15, color: "#00FFFF", active: "Micro-Dose B5" },
+  { id: "extra-mask", name: "Deep Cement Mask", type: "Seal", price: 28, color: "#FF5A00", active: "Kaolin + Ceramide" }
 ];
 
 export const UGC_REVIEWS: UgcReview[] = [

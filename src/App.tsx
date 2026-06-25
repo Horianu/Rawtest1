@@ -199,35 +199,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Subtle floating shopify setup helper banner overlay card */}
-      <AnimatePresence>
-        {!cookieConsentHidden && (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed bottom-6 right-6 z-40 max-w-sm bg-white border-4 border-raw-charcoal p-4 shadow-[6px_6px_0px_#121212] flex gap-3 text-raw-charcoal"
-          >
-            <Info className="w-5 h-5 text-hot-magenta shrink-0" />
-            <div>
-              <p className="font-space text-xs font-black uppercase tracking-tight">SHOPIFY ONLINE STORE 2.0 STYLE DECK</p>
-              <p className="font-sans text-[10.5px] font-semibold text-neutral-500 mt-1 leading-normal">
-                This mockup features a high-fidelity preset of customizable schemas, section blocks, interactive multi-discount stackers, and slide bags. Build target completed.
-              </p>
-              <div className="mt-3 flex items-center justify-between">
-                <span className="font-mono text-[9px] bg-toxic-lime px-1.5 py-0.5 border border-raw-charcoal rounded text-raw-charcoal font-black">THEME PREVIEW READY</span>
-                <button 
-                  onClick={() => setCookieConsentHidden(true)}
-                  className="font-mono text-[9px] font-black underline text-raw-charcoal hover:text-hot-magenta"
-                >
-                  DISMISS INFO
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
     </div>
   );
 }

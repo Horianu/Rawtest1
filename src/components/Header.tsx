@@ -26,11 +26,11 @@ export default function Header({
   const [searchOpen, setSearchOpen] = useState(false);
 
   const navLinks = [
+    { label: 'Why RAW', id: 'why-raw' },
     { label: 'Shop Kits', id: 'featured-routines' },
     { label: 'Routines', id: 'how-it-works' },
-    { label: 'The Stack', id: 'bundle-builder' },
-    { label: 'Why RAW', id: 'why-raw' },
     { label: 'Inside', id: 'ingredient-band' },
+    { label: 'The Stack', id: 'bundle-builder' },
   ];
 
   return (

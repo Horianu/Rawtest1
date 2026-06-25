@@ -112,9 +112,14 @@ export default function HowItWorks() {
                     </div>
                   </div>
 
-                  {/* Active Indicator Pin */}
+                  {/* Active/Inactive Indicator Pin */}
+                  {!isActive && (
+                    <span className="hidden lg:block w-3 h-3 bg-toxic-lime border-2 border-raw-charcoal rounded-full animate-pulse shadow-[0_0_8px_#DFFF00]" />
+                  )}
                   {isActive && (
-                    <span className="hidden lg:block w-3.5 h-3.5 bg-raw-charcoal border-2 border-white rounded-full animate-ping" />
+                    <div className="hidden lg:block w-3.5 h-3.5 border-2 border-raw-charcoal rounded-full bg-raw-charcoal flex items-center justify-center">
+                       <div className="w-1.5 h-1.5 bg-white rounded-full" />
+                    </div>
                   )}
                 </button>
               );
