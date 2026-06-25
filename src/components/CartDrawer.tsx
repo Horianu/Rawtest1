@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Trash2, ShieldCheck, Lock, ShoppingBag, Plus, Minus, Check } from 'lucide-react';
 import { CartItem } from '../types';
@@ -20,6 +21,7 @@ export default function CartDrawer({
 }: CartDrawerProps) {
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutComplete, setCheckoutComplete] = useState(false);
+  const [cartListRef] = useAutoAnimate();
 
   // Math
   const subtotal = items.reduce((acc, curr) => acc + (curr.product.price * curr.quantity), 0);
@@ -154,7 +156,7 @@ export default function CartDrawer({
                   </div>
 
                   {/* Products Map Group */}
-                  <div className="space-y-3">
+                  <div ref={cartListRef} className="space-y-3">
                     {items.map((item, idx) => {
                       const kit = item.product;
                       const isCustom = kit.id.includes('custom-stack');

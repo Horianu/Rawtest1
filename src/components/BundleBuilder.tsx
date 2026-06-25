@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Shuffle, Plus, Check, ShoppingBag, Star, Truck, Zap, Gift, RefreshCcw, Info, X } from 'lucide-react';
 import { Product } from '../types';
@@ -14,6 +15,9 @@ export default function BundleBuilder({ onAddCustomStack }: BundleBuilderProps) 
   const [isSubscription, setIsSubscription] = useState(false);
   const [animateLever, setAnimateLever] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  
+  const [stackParent] = useAutoAnimate();
+  const [subRef] = useAutoAnimate();
 
   // Derive products from IDs
   const selectedProducts = useMemo(() => {
@@ -131,7 +135,7 @@ export default function BundleBuilder({ onAddCustomStack }: BundleBuilderProps) 
             </div>
 
             {/* The Stack Sculpture */}
-            <div className="flex-1 flex flex-col-reverse items-center justify-end relative pb-10">
+            <div ref={stackParent} className="flex-1 flex flex-col-reverse items-center justify-end relative pb-10">
               <AnimatePresence mode="popLayout">
                 {selectedProducts.map((prod, idx) => (
                   <motion.div
@@ -279,6 +283,7 @@ export default function BundleBuilder({ onAddCustomStack }: BundleBuilderProps) 
 
             {/* SUBSCRIPTION TOGGLE */}
             <div 
+              ref={subRef}
               onClick={() => setIsSubscription(!isSubscription)}
               className={`p-4 border-4 border-raw-charcoal transition-all cursor-pointer select-none group ${
                 isSubscription ? 'bg-electric-cyan text-raw-charcoal' : 'bg-raw-charcoal border-white/20 text-white/40 hover:border-white'
